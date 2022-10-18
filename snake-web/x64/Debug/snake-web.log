@@ -1,0 +1,3 @@
+﻿  Source.cpp
+D:\Users\Dima\source\repos\snake-web\Source.cpp(50,13): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+  snake-web.vcxproj -> D:\Users\Dima\source\repos\snake-web\x64\Debug\snake-web.exe
