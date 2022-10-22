@@ -1,0 +1,6 @@
+﻿  Helper.cpp
+D:\Users\Dima\source\repos\snake-web\Helper.cpp(12,23): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\Users\Dima\source\repos\snake-web\Helper.cpp(16,28): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+D:\Users\Dima\source\repos\snake-web\Helper.cpp(23,26): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+D:\Users\Dima\source\repos\snake-web\Helper.cpp(57): warning C4715: Read: значение возвращается не при всех путях выполнения
+  snake-web.vcxproj -> D:\Users\Dima\source\repos\snake-web\x64\Debug\snake-web.exe
