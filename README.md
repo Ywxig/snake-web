@@ -1,9 +1,8 @@
 # snake-web
 
-`snake-web` — это язык для написания веб страниц и присвоения странице особого стиля
-Он позволяет увеличить скорость написания страниц
+`snake-web` is a language for writing web pages and giving the page a special style. It allows you to increase the speed of writing pages.
 
-## Синтаксис и правила!
-Основное правило заключается в том что бы использовать максимально преимущество всех языков программирования.
-По этой причине принципы Проектирование `DRY`, по мима этого принципа также хочется добавить возможность ООД и ООП.
-Эти концепции хорошо подходят для Проектирование полных полорамм, в место тепичьного функциональный стиль будем использовать ООП.
+## Sytaxsis and Rule!
+The basic rule is to take the maximum advantage of all programming languages.
+For this reason, the `DRY` design principles, in addition to this principle, I also want to add the possibility of `OOD` and `OOP`.
+These concepts are well suited for Designing full polorams, instead of the technical style we will use `OOP`.
