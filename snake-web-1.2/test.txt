@@ -1,0 +1,12 @@
+code::open::doc
+code::open::style
+
+id::open::main
+css::color: red;
+id::close
+
+code::close::style
+
+tag::p::main
+
+code::close::doc
