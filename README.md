@@ -15,9 +15,9 @@ These concepts are well suited for Designing full polorams, instead of the techn
 ## code convention was written;
 #### these are standard classes in file <filename.css>
 
-` main ` - for the body tag
-` Heder ` - for headers ( # )
-` high-light ` - highlighting a section of text ( * )
-` Italic ` - for italics ( ' )
-` text ` - to highlight individual details or to create footnotes ( ~ )
+1. ` main ` - for the body tag
+2. ` Heder ` - for headers ( # )
+3. ` high-light ` - highlighting a section of text ( * )
+4. ` Italic ` - for italics ( ' )
+5. ` text ` - to highlight individual details or to create footnotes ( ~ )
 
