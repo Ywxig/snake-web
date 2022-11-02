@@ -155,6 +155,8 @@
     <ClInclude Include="SnakeWeb.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="classic.sw" />
+    <None Include="GitForm.css" />
     <None Include="index.htm">
       <DeploymentContent>true</DeploymentContent>
     </None>

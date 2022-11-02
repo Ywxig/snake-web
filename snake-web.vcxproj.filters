@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Файлы ресурсов\Формы для стилизации">
+      <UniqueIdentifier>{4daa57cc-a60b-4d39-a61a-36becf7917cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов\Загатовки для документа">
+      <UniqueIdentifier>{6b301b07-6fe0-47cb-81cb-a2c85a80069c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -59,6 +65,12 @@
     </None>
     <None Include="matrix.mx">
       <Filter>Файлы ресурсов</Filter>
+    </None>
+    <None Include="GitForm.css">
+      <Filter>Файлы ресурсов\Формы для стилизации</Filter>
+    </None>
+    <None Include="classic.sw">
+      <Filter>Файлы ресурсов\Загатовки для документа</Filter>
     </None>
   </ItemGroup>
 </Project>

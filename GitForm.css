@@ -1,0 +1,33 @@
+.main {
+    background-color: black;
+    color: #e6e6e6;
+}
+
+/*cut*/
+.Header {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(245, 245, 245);
+}
+
+/*cut*/
+.Italic{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(142, 219, 250);    
+}
+
+/*cut*/
+.text{
+    border-left: 5px solid #e6e6e6;
+    padding-left: 10px;
+    margin-left: 5px;    
+    color: rgb(245, 245, 245);
+}
+
+/*cut*/
+.high-light{
+    border: 0px;
+    border-style: solid;
+    border-left: 10px;
+    border-left-color: rgb(1, 117, 24);
+    background-color: rgb(0, 175, 35);   
+}

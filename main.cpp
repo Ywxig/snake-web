@@ -50,15 +50,23 @@ int main() {
 			cout << "\n";
 		}
 
+		if(command == "start") {
+			string type_style_file;
+			string file;
+			cout << "$: Input name file: ";	cin >> file; // ввод даных имени файла 
+			cout << "$: Input type of styil file: ";	cin >> type_style_file; // ввод даных типа стиля файла, какое файл CSS использовать
+			WriteInFile(file, Read(type_style_file));
+		}
+
 		if (command == "run") {
 			string file_input;
 			string file_out;
 			string standart_lang;
 			cout << "$: Input file adres for input data: ";	cin >> file_input; // ввод даных для функции SnakeWeb() 
 			cout << "$: Input file adres for out data: ";	cin >> file_out; // ввод даных для функции SnakeWeb() 
-			cout << "$: Input file adres for out data: ";	cin >> standart_lang; // ввод специфекации для Snake-Web
+			cout << "$: Input standart: ";	cin >> standart_lang; // ввод специфекации для Snake-Web
 
-			if (standart_lang == "snake-web") {
+			if ((standart_lang == "snake-web") || (standart_lang == "none")) {
 				SnakeWeb(file_input, file_out);
 				log("\nStandart Using is: " + standart_lang);
 			}
@@ -76,8 +84,10 @@ int main() {
 
 		if(command=="markdown") {
 			string file_input;
-			cout << "$: Input file adres for input data: ";	cin >> file_input; // ввод даных для функции SnakeWeb() 
-			get_text_in_fail_for_markdown(file_input);
+			string file_out;
+			cout << "$: Input file adres for input data: ";	cin >> file_input; // ввод даных адреса от куда взять данные
+			cout << "$: Input file adres for out data: ";	cin >> file_out; // ввод адреса до файла
+			get_text_in_fail_for_markdown(file_input, file_out);
 		}
 
 		if (command == "report") {

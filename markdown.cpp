@@ -7,7 +7,7 @@
 
 using namespace std;
 
-vector<string> get_text_in_fail_for_markdown(string file_input) {
+void get_text_in_fail_for_markdown(string file_input, string file_out) {
 
 	vector<string> Content = split(Read(file_input), "\n");
 	
@@ -16,7 +16,7 @@ vector<string> get_text_in_fail_for_markdown(string file_input) {
 		int score = 0;
 		for (int q = 0; q < Content_str.size(); q++) {
 			if ((Content_str[q] == "#") && (score == 0)) {
-				Content_str.at(q) = "<h1>";
+				Content_str.at(q) = "<h1 class=\"Header\">";
 				score++;
 			}
 
@@ -24,10 +24,54 @@ vector<string> get_text_in_fail_for_markdown(string file_input) {
 				Content_str.at(q) = "</h1>";
 				score = 0;
 			}
+
+
+			if ((Content_str[q] == "'") && (score == 0)) {
+				Content_str.at(q) = "<i class=\"Italic\">";
+				score++;
+			}
+
+			if ((Content_str[q] == "'") && (score != 0)) {
+				Content_str.at(q) = "</i>";
+				score = 0;
+			}
+
+
+			if ((Content_str[q] == "*") && (score == 0)) {
+				Content_str.at(q) = "<b class=\"high-light\">";
+				score++;
+			}
+
+			if ((Content_str[q] == "*") && (score != 0)) {
+				Content_str.at(q) = "</b>";
+				score = 0;
+			}
+
+			if ((Content_str[q] == "~") && (score == 0)) {
+				Content_str.at(q) = "<big class=\"text\">";
+				score++;
+			}
+
+			if ((Content_str[q] == "~") && (score != 0)) {
+				Content_str.at(q) = "</big>";
+				score = 0;
+			}
+			
+			if ((Content_str[q] == "/")) {
+				Content_str.at(q) = "<p class=\"text\">";
+				score++;
+			}
+
+			if ((Content_str[q] == ".")) {
+				Content_str.at(q) = "</p>";
+				score = 0;
+			}
+
+
 		}
-		// вот тут пж надо поменять вывод на другой если можно через функцию AddInFile() как в trello! пж пж пж
-		cout << join(Content_str);
-		vector<string> vec;
-		return vec;
+		
+		for (int e = 0; e < Content_str.size(); e++) {
+			AddInFile(file_out, " " + Content_str[e]);
+		}
 	}
 }

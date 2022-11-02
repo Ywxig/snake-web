@@ -1,3 +1,2 @@
-﻿  markdown.cpp
-D:\Users\Dima\source\repos\snake-web\markdown.cpp(32): warning C4715: get_text_in_fail_for_markdown: значение возвращается не при всех путях выполнения
+﻿  main.cpp
   snake-web.vcxproj -> D:\Users\Dima\source\repos\snake-web\x64\Debug\snake-web.exe

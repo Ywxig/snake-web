@@ -4,6 +4,7 @@
 #include <sstream>
 #include <vector>
 #include "Helper.h"
+#include "markdown.h"
 
 //
 //фаил инторпритатора с моего прикрассного языка в CSS КАКОЙТО
@@ -41,7 +42,7 @@ public:
 public:
 
 	void garbage_collector() {
-		WriteInFile(file_matrix, "");
+		WriteInFile(file_matrix, "0,0,0");
 	}
 
 };
@@ -166,10 +167,15 @@ int SnakeWeb(string file_input, string file_out) {// Функция с самим языком. Тут
 					}
 
 					if (Word[2] == "style") {
-						AddInFile(file_out, "\n</style>\n<body>");
+						AddInFile(file_out, "\n</style>\n<body class=\"main\">");
 					}
 				}
 			}
+
+			if (Word[0] == "md") {
+				get_text_in_fail_for_markdown(Word[1], file_out);
+			}
+
 
 			if (Word[0] == "use") {
 				if (Word[1] == "css") {
