@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF - 8">
+	<meta http-equiv="X - UA - Compatible" content="IE = edge">
+	<meta name="viewport" content="width = device - width, initial - scale = 1.0">
+	<title>Document</title>
+</head>
+
+<style>.main {
+    color: #fdfdfd;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #262729;
+}
+
+/*cut*/
+.Header {
+    margin-left: 5px;
+    color: rgb(221, 221, 221);
+    border: 0;
+    border-bottom: solid 2px;
+    border-left-color: rgb(29, 29, 29);
+}
+
+/*cut*/
+.Italic {
+    background-color: rgb(54, 54, 54);
+}
+
+/*cut*/
+.block {
+    margin-left: 10px;
+    border: 1px solid;
+    border-color: #fdfdfd;
+    border-radius: 15px;
+    background-color: #7474740e;
+}
+
+
+
+
+/*cut*/
+.text {
+    margin-left: 10px;
+    border-left: 2px solid #ffffff;
+    padding-left: 10px;
+    margin-left: 5px;
+    color: rgb(214, 213, 213);
+}
+
+/*cut*/
+.Block {
+    margin-left: 10px;
+    border: 2px solid #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    color: rgb(214, 213, 213);
+}
+
+#corect {
+    margin-left: 15px;
+    border-left: 5px solid;
+    border-left-color: rgb(11, 68, 11);
+    background-color: rgb(0, 126, 17);
+}
+
+#no-corect {
+    margin-left: 15px;
+    border-left-color: rgb(165, 0, 0);   
+    border-left-color: rgb(201, 2, 2);
+}
+
+/*cut*/
+.Link {
+    text-decoration: none;
+    color: #fdfdfd;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*cut*/
+.note {
+    margin-left: 10px;
+    padding: 10px;
+    border: 1px solid;
+    border-color: #0168c9a2;
+    border-radius: 15px;
+    background-color: #0051ff49;    
+}
+
+/*cut*/
+.high-light {
+    border: 0px;
+    border-style: solid;
+    border-left: 10px;
+    border-left-color: rgb(1, 95, 1);
+    background-color: rgb(0, 201, 27);
+}
+</style>
+<body class="main">                                    <h1 class="Header"> Добро пожаловать в Snake-Web </h1>  <div class="Block"> <img src="https://www.markdownguide.org/assets/images/markdown-guide-og.jpg" width="700">  </div>
+<br> <div class="Block">  
+<br> 1. Если вы создали свой класс который не входит в список стандартных имён, то вым предётся обойтись простым тегом 
+<br>  2. Если вы создали свой класс который, и используете вместе со своим стелем стандартный стиль из classic.css, то убедитесь что ваш класс или айдишник не повторяется 
+<br>  3. По возможности не ломайте коменты <i class="Italic"> cut </i> это разделитель для формы при отсудствии этих коментов вы не сможите использовать формы 
+<br>  4.  Для обхода заметки номер 2, вы можите использовать только чясть стандартного стиля  <h2 class="Header"> Обезательные названия классов и айдишников </h2> 
+<br>  main - для тега body 
+<br> .Heder - для заголовков (#) 
+<br> .high-light - подсветка участка текста (*) 
+<br> .Italic - для курсивной записи (") 
+<br> .text - для выделения отдельных деталей или для создания сносок (~) 
+<br> .btn - используется только на кнопке 
+<br> .Link - используется только на ссылки и 
+<br> .note - исподлзуется для создания какойто подсказки 
+<br> #corect - добовляет тексту зелёную подсветку таким оброзом можно показать что такой варианта хорошо 
+<br> #no-corect - добовляет крассную подсветку тексту, показывая что вариант не правелен 
+<br> .Block - для обозначения блоков, в данном документе какрастоки используется такой стиль 
+<br>  </div>
+<br>  <div class="note"> Соблюдая эти простые правила можено создать совместимые стили,  данный символ закрывает тег div так что можно добавить просто открывающейся тег ((note) - на пример тоесть слеш и дальше название класса и всё  
+<br> 
+<br>  Для добавления своего элемента в md можно воспользоватся простым правилом 
+<br> 1. Если вы создаёти элемент на базе тега div та можно создать только одну условную конструкцияю 
+<br> 2. Убедитесь об уникальности вашего класса для данной констрекции  </div>
+<br>  <div class="note"> Snake-Web - это язык гипер текстовой разметки, который был вдахновлён асемблиром стиль, и логика построчьного выполнения такаеже как и в асемблире </div>
+<br>  <h2 class="Header"> Синтаксис Snake-Web </h2> <div class="note">  
+<br> Snake-Web - Имеет поддержку CSS с самой первой версии, это значит что без всяких проблем можно перевести ваш сатый код написанным на css в sw 
+<br> </div>
+<br>  <div class="note"> Сначяло я приведу пример правельного кода, а потом я приведу пример не правельной релизации.  
+<br> Главное привело что все ключевые слова оделяются <i class="Italic"> :: </i> таким образом мы получяем  синтаксис который лехко можно разбить по словам </div>
+<br>  <div class="Block"> <h2 class="Header"> CSS в Snake-Web </h3>  <div id="corect">  
+<br> css::border: 1px solid #ffffff; 
+<br> </div>
+<br>  <div id="no-corect">  
+<br> css:border: 1px solid #ffffff; 
+<br> </div>
+<br> </div>
+<br>  <div class="Block"> <h2 class="Header"> CSS id и class </h3>  <div id="corect">  
+<br> id::open::Name-id 
+<br> css::border: 1px solid #ffffff; 
+<br> id::open::Name-id 
+<br> </div>
+<br>  <div id="no-corect">  
+<br> #name-id { 
+<br> border: 1px solid #ffffff; 
+<br> } 
+<br> </div>
+<br> </div>
+<br>   <div class="note"> Но для создания документа на Snake-Web надо не только написать <i class="Italic"> CSS:: </i> но и если вы хотите использовать CSS в связке с HTML то надо написать структуру документа, структура создаётся очень прости во пример:  
+<br>  </div>
+<br> <div class="Block"> <h2 class="Header"> Классическая структура документа </h3> <div id="corect"> code::open::doc code::open::style  use::css::classic.css  code::close::style  teg::p::Text  code::close::doc  </div>
+<br> 
+<br>  </div>
+<br>  <div class="note"> Но по мимо этого способа можно создать эту структуру проще и быстрее, вместо этого запустите программу <i class="Italic"> main </i> , потом введите <i class="Italic"> start </i> . Потом введите адрес до файла в котором хотите создать сируктуру, после укажите фаил с структурой в нашем случие <i class="Italic"> classic.sw </i> . И всё готово! </div>
+<br>  <h2 class="Header"> Переменные   </h3> <div class="note"> Да, как и в в ЯП-ах я добавил возможность обявлять переменные. В данный момент переменная может хранить в себе <i class="Italic"> 3D-вектор </i> в деопазоне от <i class="Italic"> 0-255 </i> , да это для работы с  <i class="Italic"> RGB </i> . Принцип работы прост но интересен, при создании переменной в файле <i class="Italic"> matrix.mx </i> добовляется ваша переменная с интексом <i class="Italic"> 1 </i> , поскольку есть переменная с значением <i class="Italic"> 0 </i> </div>
+<br>  <div class="Block">  <h2 class="Header"> Обявление переменых </h3> 
+<br> <div id="corect">  var::color::10,10,10  </div>
+<br> 
+<br> Так создаётся переменная типа color, в которой находится вектор с цветом. Но если укозать значение больше чем разрешонный деопазон то, заначение просто округлится до 255. 
+<br>  </div>
+<br>    
+</body>
+</html> <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF - 8">
+	<meta http-equiv="X - UA - Compatible" content="IE = edge">
+	<meta name="viewport" content="width = device - width, initial - scale = 1.0">
+	<title>Document</title>
+</head>
+
+<style>.main {
+    color: #fdfdfd;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #262729;
+}
+
+/*cut*/
+.Header {
+    margin-left: 5px;
+    color: rgb(221, 221, 221);
+    border: 0;
+    border-bottom: solid 2px;
+    border-left-color: rgb(29, 29, 29);
+}
+
+/*cut*/
+.Italic {
+    background-color: rgb(54, 54, 54);
+}
+
+/*cut*/
+.block {
+    margin-left: 10px;
+    border: 1px solid;
+    border-color: #fdfdfd;
+    border-radius: 15px;
+    background-color: #7474740e;
+}
+
+
+
+
+/*cut*/
+.text {
+    margin-left: 10px;
+    border-left: 2px solid #ffffff;
+    padding-left: 10px;
+    margin-left: 5px;
+    color: rgb(214, 213, 213);
+}
+
+/*cut*/
+.Block {
+    margin-left: 10px;
+    border: 2px solid #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    color: rgb(214, 213, 213);
+}
+
+#corect {
+    margin-left: 15px;
+    border-left: 5px solid;
+    border-left-color: rgb(11, 68, 11);
+    background-color: rgb(0, 126, 17);
+}
+
+#no-corect {
+    margin-left: 15px;
+    border-left-color: rgb(165, 0, 0);   
+    border-left-color: rgb(201, 2, 2);
+}
+
+/*cut*/
+.Link {
+    text-decoration: none;
+    color: #fdfdfd;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*cut*/
+.note {
+    margin-left: 10px;
+    padding: 10px;
+    border: 1px solid;
+    border-color: #0168c9a2;
+    border-radius: 15px;
+    background-color: #0051ff49;    
+}
+
+/*cut*/
+.high-light {
+    border: 0px;
+    border-style: solid;
+    border-left: 10px;
+    border-left-color: rgb(1, 95, 1);
+    background-color: rgb(0, 201, 27);
+}
+</style>
+<body class="main">                                    <h1 class="Header"> Добро пожаловать в Snake-Web </h1>  <div class="Block"> <img src="https://www.markdownguide.org/assets/images/markdown-guide-og.jpg" width="700">  </div>
+<br> <div class="Block">  
+<br> 1. Если вы создали свой класс который не входит в список стандартных имён, то вым предётся обойтись простым тегом 
+<br>  2. Если вы создали свой класс который, и используете вместе со своим стелем стандартный стиль из classic.css, то убедитесь что ваш класс или айдишник не повторяется 
+<br>  3. По возможности не ломайте коменты <i class="Italic"> cut </i> это разделитель для формы при отсудствии этих коментов вы не сможите использовать формы 
+<br>  4.  Для обхода заметки номер 2, вы можите использовать только чясть стандартного стиля  <h2 class="Header"> Обезательные названия классов и айдишников </h2> 
+<br>  main - для тега body 
+<br> .Heder - для заголовков (#) 
+<br> .high-light - подсветка участка текста (*) 
+<br> .Italic - для курсивной записи (") 
+<br> .text - для выделения отдельных деталей или для создания сносок (~) 
+<br> .btn - используется только на кнопке 
+<br> .Link - используется только на ссылки и 
+<br> .note - исподлзуется для создания какойто подсказки 
+<br> #corect - добовляет тексту зелёную подсветку таким оброзом можно показать что такой варианта хорошо 
+<br> #no-corect - добовляет крассную подсветку тексту, показывая что вариант не правелен 
+<br> .Block - для обозначения блоков, в данном документе какрастоки используется такой стиль 
+<br>  </div>
+<br>  <div class="note"> Соблюдая эти простые правила можено создать совместимые стили,  данный символ закрывает тег div так что можно добавить просто открывающейся тег ((note) - на пример тоесть слеш и дальше название класса и всё  
+<br> 
+<br>  Для добавления своего элемента в md можно воспользоватся простым правилом 
+<br> 1. Если вы создаёти элемент на базе тега div та можно создать только одну условную конструкцияю 
+<br> 2. Убедитесь об уникальности вашего класса для данной констрекции  </div>
+<br>  <div class="note"> Snake-Web - это язык гипер текстовой разметки, который был вдахновлён асемблиром стиль, и логика построчьного выполнения такаеже как и в асемблире </div>
+<br>  <h2 class="Header"> Синтаксис Snake-Web </h2> <div class="note">  
+<br> Snake-Web - Имеет поддержку CSS с самой первой версии, это значит что без всяких проблем можно перевести ваш сатый код написанным на css в sw 
+<br> </div>
+<br>  <div class="note"> Сначяло я приведу пример правельного кода, а потом я приведу пример не правельной релизации.  
+<br> Главное привело что все ключевые слова оделяются <i class="Italic"> :: </i> таким образом мы получяем  синтаксис который лехко можно разбить по словам </div>
+<br>  <div class="Block"> <h2 class="Header"> CSS в Snake-Web </h3>  <div id="corect">  
+<br> css::border: 1px solid #ffffff; 
+<br> </div>
+<br>  <div id="no-corect">  
+<br> css:border: 1px solid #ffffff; 
+<br> </div>
+<br> </div>
+<br>  <div class="Block"> <h2 class="Header"> CSS id и class </h3>  <div id="corect">  
+<br> id::open::Name-id 
+<br> css::border: 1px solid #ffffff; 
+<br> id::open::Name-id 
+<br> </div>
+<br>  <div id="no-corect">  
+<br> #name-id { 
+<br> border: 1px solid #ffffff; 
+<br> } 
+<br> </div>
+<br> </div>
+<br>   <div class="note"> Но для создания документа на Snake-Web надо не только написать <i class="Italic"> CSS:: </i> но и если вы хотите использовать CSS в связке с HTML то надо написать структуру документа, структура создаётся очень прости во пример:  
+<br>  </div>
+<br> <div class="Block"> <h2 class="Header"> Классическая структура документа </h3> <div id="corect"> code::open::doc code::open::style  use::css::classic.css  code::close::style  teg::p::Text  code::close::doc  </div>
+<br> 
+<br>  </div>
+<br>  <div class="note"> Но по мимо этого способа можно создать эту структуру проще и быстрее, вместо этого запустите программу <i class="Italic"> main </i> , потом введите <i class="Italic"> start </i> . Потом введите адрес до файла в котором хотите создать сируктуру, после укажите фаил с структурой в нашем случие <i class="Italic"> classic.sw </i> . И всё готово! </div>
+<br>  <h2 class="Header"> Переменные   </h3> <div class="note"> Да, как и в в ЯП-ах я добавил возможность обявлять переменные. В данный момент переменная может хранить в себе <i class="Italic"> 3D-вектор </i> в деопазоне от <i class="Italic"> 0-255 </i> , да это для работы с  <i class="Italic"> RGB </i> . Принцип работы прост но интересен, при создании переменной в файле <i class="Italic"> matrix.mx </i> добовляется ваша переменная с интексом <i class="Italic"> 1 </i> , поскольку есть переменная с значением <i class="Italic"> 0 </i> </div>
+<br>  <div class="Block">  <h2 class="Header"> Обявление переменых </h3> 
+<br> <div id="corect">  var::color::10,10,10  </div>
+<br> 
+<br> Так создаётся переменная типа color, в которой находится вектор с цветом. Но если укозать значение больше чем разрешонный деопазон то, заначение просто округлится до 255. 
+<br>  </div>
+<br>    
+</body>
+</html> 
