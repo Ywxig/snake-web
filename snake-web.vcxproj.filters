@@ -72,5 +72,8 @@
     <None Include="classic.sw">
       <Filter>Файлы ресурсов\Загатовки для документа</Filter>
     </None>
+    <None Include="classic.css">
+      <Filter>Файлы ресурсов\Формы для стилизации</Filter>
+    </None>
   </ItemGroup>
 </Project>
