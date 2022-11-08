@@ -102,10 +102,6 @@ int SnakeWeb(string file_input, string file_out) {// Функция с самим языком. Тут
 				AddInFile(file_out, "\n" + Word[1] + "\n");
 			}
 
-			if (Word[0] == "cls") {
-				WriteInFile(file_out, "");
-			}
-
 			if (Word[0] == "tag") {
 				string teg_style = "\n<" + Word[1] + "> " + "id = \"" + Word[2] + "\"" + "</" + Word[1] + ">";// создание тега и привезание его к id
 				AddInFile(file_out, teg_style);// ввод в фаил
@@ -149,7 +145,7 @@ int SnakeWeb(string file_input, string file_out) {// Функция с самим языком. Тут
 					AddInFile(file_out, id);
 				}
 				if (Word[1] == "close") {
-					string id = "\n}";
+					string id = "}";
 					AddInFile(file_out, id);
 				}
 			}
@@ -163,10 +159,6 @@ int SnakeWeb(string file_input, string file_out) {// Функция с самим языком. Тут
 					if (Word[2] == "style") {
 						AddInFile(file_out, "\n<style>");
 					}
-
-					if (Word[2] == "js") {
-						AddInFile(file_out, "\n<script>");
-					}
 				}
 
 				if (Word[1] == "close") {
@@ -177,21 +169,7 @@ int SnakeWeb(string file_input, string file_out) {// Функция с самим языком. Тут
 					if (Word[2] == "style") {
 						AddInFile(file_out, "\n</style>\n<body class=\"main\">");
 					}
-
-					if (Word[2] == "js") {
-						AddInFile(file_out, "\n</script>");
-					}
-
 				}
-			}
-
-
-			if (Word[0]=="link") {
-				AddInFile(file_out, "\n<p class=\" Link-Text \"><a class=\" Link \" href=\"" + Word[1] + "\">  " + Word[2] + "</a></p>");
-			}
-
-			if (Word[0] == "canvas") {
-				AddInFile(file_out, "\n<canvas wight=\"" + Word[1] + "\" height=\"" + Word[2] + "\"> </canvas>");
 			}
 
 			if (Word[0] == "md") {
@@ -216,7 +194,7 @@ int SnakeWeb(string file_input, string file_out) {// Функция с самим языком. Тут
 					if (Word[2] == "var") {
 						Matrix matrix;
 
-						AddInFile(file_out, "\nbackground-color: rgb(" + matrix.getElement(stoi(Word[3]), 0) + ", " + matrix.getElement(stoi(Word[3]), 1) + ", " + matrix.getElement(stoi(Word[3]), 2) + ");\n");
+						AddInFile(file_out, "\nbackground-color: rgb(" + matrix.getElement(stoi(Word[3]), 0) + ", " + matrix.getElement(stoi(Word[3]), 1) + ", " + matrix.getElement(stoi(Word[3]), 2) + ");");
 
 					} else {
 						// Работа с цветом
@@ -237,7 +215,7 @@ int SnakeWeb(string file_input, string file_out) {// Функция с самим языком. Тут
 								color_fin_vector.push_back(fin_color);
 							}
 						}
-						AddInFile(file_out, "\nbackground-color: rgb(" + color_fin_vector[0] + ", " + color_fin_vector[1] + ", " + color_fin_vector[2] + ");\n");
+						AddInFile(file_out, "\nbackground-color: rgb(" + color_fin_vector[0] + ", " + color_fin_vector[1] + ", " + color_fin_vector[2] + ");");
 					}
 
 					
@@ -261,7 +239,7 @@ int SnakeWeb(string file_input, string file_out) {// Функция с самим языком. Тут
 						}
 					}
 
-					AddInFile(file_out, "\ncolor: rgb(" + color_fin_vector[0] + ", " + color_fin_vector[1] + ", " + color_fin_vector[2] + ");\n");
+					AddInFile(file_out, "\ncolor: rgb(" + color_fin_vector[0] + ", " + color_fin_vector[1] + ", " + color_fin_vector[2] + ");");
 
 				}
 			}
