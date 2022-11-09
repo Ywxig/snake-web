@@ -1,2 +1,10 @@
-﻿  markdown.cpp
-  snake-web.vcxproj -> D:\Users\Dima\source\repos\snake-web\x64\Debug\snake-web.exe
+﻿  main.cpp
+  Helper.cpp
+C:\Users\User\Source\Repos\snake-web\Helper.cpp(12,23): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\User\Source\Repos\snake-web\Helper.cpp(16,28): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\User\Source\Repos\snake-web\Helper.cpp(23,26): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+  markdown.cpp
+  SnakeWeb.cpp
+  Создание кода...
+C:\Users\User\Source\Repos\snake-web\SnakeWeb.cpp(40): warning C4715: Matrix::getElement: значение возвращается не при всех путях выполнения
+  snake-web.vcxproj -> C:\Users\User\Source\Repos\snake-web\x64\Debug\snake-web.exe

@@ -134,3 +134,10 @@ vector<string> split(string str, string sep = " ") {// Функция для разбивания ст
 
 
 	};
+
+string GetFunctionInJsScript(string file_input, string file_out, int index) {
+	
+	vector<string> content_list = split(Read(file_input), "//cut");
+	return content_list[index];
+
+}

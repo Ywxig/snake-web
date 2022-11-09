@@ -186,6 +186,15 @@ int SnakeWeb(string file_input, string file_out) {// Функция с самим языком. Тут
 			}
 
 
+
+			if ( Word[0] == "script") {
+				AddInFile(file_out, Read( Word[1] ));
+			}
+
+			if (Word[0] == "function") {
+				AddInFile(file_out, GetFunctionInJsScript(file_input, Word[1], stoi(Word[2])));
+			}
+
 			if (Word[0]=="link") {
 				AddInFile(file_out, "\n<p class=\" Link-Text \"><a class=\" Link \" href=\"" + Word[1] + "\">  " + Word[2] + "</a></p>");
 			}

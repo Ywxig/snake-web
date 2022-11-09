@@ -1,1 +1,2 @@
 D:\Users\Dima\source\repos\snake-web\x64\Debug\snake-web.exe
+C:\Users\User\Source\Repos\snake-web\x64\Debug\snake-web.exe
