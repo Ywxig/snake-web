@@ -30,3 +30,7 @@ or you can write your own table, but there is a limitation in the table, you can
 
 ` td ` - table rows i.e. ` 1-n ` where ` n ` is the number of rows
 
+# review
+
+Algorithm for checking the code for the presence of any word or structure, and subcheck as a percentage of the number of key words in the code
+
