@@ -21,3 +21,12 @@ These concepts are well suited for Designing full polorams, instead of the techn
 4. ` Italic ` - for italics ( ' )
 5. ` text ` - to highlight individual details or to create footnotes ( ~ )
 
+# Tables
+Since html has the ability to create tables, it is also possible to create tables in SW, there is a table that has been created and you only need to write the correct operator
+or you can write your own table, but there is a limitation in the table, you cannot add more than one cell, only one cell.
+
+
+` tr ` - answers for the table itself, this is tet ` table `
+
+` td ` - table rows i.e. ` 1-n ` where ` n ` is the number of rows
+
