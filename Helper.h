@@ -22,4 +22,6 @@ void log(string log_text);// инструмент записи логов
 void printv(vector<string> arr);
 string int_to_str(int num);// функция для перевода иш int в str
 
+template<typename T>
+string toString(T val); // перевод из числа в сторку
 #endif

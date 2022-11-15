@@ -1,3 +1,4 @@
+cls
 code::open::doc
 code::open::style
 
@@ -6,7 +7,8 @@ use::css::classic.css
 
 code::close::style
 
-
-md::ReadMe.sw
+tr::open
+td::3
+tr::close
 
 code::close::doc

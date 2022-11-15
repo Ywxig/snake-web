@@ -6,9 +6,6 @@
 #include "Helper.h"
 #include "markdown.h"
 
-//
-//фаил инторпритатора с моего прикрассного языка в CSS КАКОЙТО
-//
 
 class Matrix {
 
@@ -16,6 +13,7 @@ public:
 	
 	vector<string> matrix_str_names_var;
 	const string file_matrix = "matrix.mx";
+	
 
 public:
 	void addMatrix(string data) {
@@ -23,13 +21,13 @@ public:
 	}
 
 public:
-	string getElement(int index_str, int index_block) {
+	string getElement(int index_str, int index_block, string split_teg=",") {
 
 		vector<string> matrix_str = split(Read(file_matrix), "\n");
 
 		for (int i = 0; i < matrix_str.size(); i++) {
 			if (i == index_str) {
-				vector<string> str_in_matrix = split(matrix_str[index_str], ",");
+				vector<string> str_in_matrix = split(matrix_str[index_str], split_teg);
 				for (int q = 0; q < str_in_matrix.size(); q++) {
 					if (q == index_block) {
 						return str_in_matrix[index_block];
@@ -81,6 +79,16 @@ public:
 	}
 };
 
+void add_in_sirealize(string file_for_add, string content) {
+	vector<string> zero_string_content = split(Read(file_for_add), "::");
+	if (zero_string_content.size() > 1) {
+		AddInFile(file_for_add, "bd::" + content);
+	}
+	else {
+		cout << "Sory, add_in_sirealize return error" << endl;
+	}
+}
+
 
 int SnakeWeb(string file_input, string file_out) {// Функция с самим языком. Тут описана вся логика языка 
 
@@ -107,7 +115,7 @@ int SnakeWeb(string file_input, string file_out) {// Функция с самим языком. Тут
 			}
 
 			if (Word[0] == "tag") {
-				string teg_style = "\n<" + Word[1] + "> " + "id = \"" + Word[2] + "\"" + "</" + Word[1] + ">";// создание тега и привезание его к id
+				string teg_style = "\n<" + Word[1] + " " + "id = \"" + Word[2] + "\">" + "</" + Word[1] + ">";// создание тега и привезание его к id
 				AddInFile(file_out, teg_style);// ввод в фаил
 			}
 
@@ -129,7 +137,7 @@ int SnakeWeb(string file_input, string file_out) {// Функция с самим языком. Тут
 
 					if (Word[2] != "") {
 						matrix.addMatrix(Word[2]);
-						cout << Read("matrix.mx");
+						cout << "RGB var is crat!";
 					}
 
 					else {
@@ -167,6 +175,11 @@ int SnakeWeb(string file_input, string file_out) {// Функция с самим языком. Тут
 					if (Word[2] == "js") {
 						AddInFile(file_out, "\n<script>");
 					}
+
+					if (Word[2] == "btn-top") {
+						AddInFile(file_out, "\n<div class=\"button-palce-top\">");
+					}
+
 				}
 
 				if (Word[1] == "close") {
@@ -182,12 +195,16 @@ int SnakeWeb(string file_input, string file_out) {// Функция с самим языком. Тут
 						AddInFile(file_out, "\n</script>");
 					}
 
+					if (Word[2] == "btn") {
+						AddInFile(file_out, "\n</div>");
+					}
+
 				}
 			}
 
 
 			if (Word[0]=="link") {
-				AddInFile(file_out, "\n<p class=\" Link-Text \"><a class=\" Link \" href=\"" + Word[1] + "\">  " + Word[2] + "</a></p>");
+				AddInFile(file_out, "\n<p class=\"Link-Text\"><a class=\"Link\" href=\"" + Word[1] + "\">  " + Word[2] + "</a></p>");
 			}
 
 			if (Word[0] == "canvas") {
@@ -198,11 +215,60 @@ int SnakeWeb(string file_input, string file_out) {// Функция с самим языком. Тут
 				get_text_in_fail_for_markdown(Word[1], file_out);
 			}
 
+			if (Word[0] == "button") {
+				if (Word[1] == "def") {
+					AddInFile(file_out, "\n<button class=\"button-defolt\">" + Word[2] + "</botton>");
+				}
+
+				if (Word[1] == "custom") {
+					AddInFile(file_out, "\n<button class=\""+ Word[2]+"\">" + Word[3] + "</botton>\n");
+				}
+
+			}
+
+			if ( Word[0] == "tr") {
+				if ( Word[1] == "oopen") {
+					AddInFile(file_out, "\n<table>\n");
+				}
+
+				if ( Word[1] == "close") {
+					AddInFile(file_out, "\n</table>\n");
+				}
+			}
+
+			if ( Word[0] == "td") {
+				int index_col = stoi(Word[1]);
+				vector<string> col;
+					for (int i = 0; i < index_col; i++) {
+						AddInFile(file_out, "<tr>\n<td> ... </td></tr>\n");
+					}
+					
+				
+
+			}
+
 
 			if (Word[0] == "use") {
 				if (Word[1] == "css") {
-					string content_file_css = Read(Word[2]);
-					AddInFile(file_out, content_file_css);
+					int index_var = 1;
+					vector<string> content_file_css = split(Read(Word[2]));
+					for (int i = 0; i < content_file_css.size(); i++) {
+
+						if (content_file_css[i] == "Var") {
+
+							Matrix matrix;
+							if ((stoi(matrix.getElement(index_var, 0)) < 255) && (stoi(matrix.getElement(index_var, 0)) > 0)) {
+								content_file_css.at(i) = matrix.getElement(index_var, 0) + "," + matrix.getElement(index_var, 1) + "," + matrix.getElement(index_var, 2);
+								index_var++;
+							}
+							
+						}
+					}
+
+					for (int q = 0; q < content_file_css.size(); q++) {
+						AddInFile(file_out, " " + content_file_css[q]);
+					}
+
 				}
 
 				if (Word[1] == "form") {
