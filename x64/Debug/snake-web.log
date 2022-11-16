@@ -1,3 +1,6 @@
 ﻿  SnakeWeb.cpp
+  Tasker.cpp
+  Создание кода...
+D:\Users\Dima\source\repos\snake-web\Tasker.cpp(105): warning C4715: achievement::get: значение возвращается не при всех путях выполнения
 D:\Users\Dima\source\repos\snake-web\SnakeWeb.cpp(38): warning C4715: Matrix::getElement: значение возвращается не при всех путях выполнения
   snake-web.vcxproj -> D:\Users\Dima\source\repos\snake-web\x64\Debug\snake-web.exe

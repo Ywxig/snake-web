@@ -143,7 +143,9 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Helper.cpp" />
     <ClCompile Include="markdown.cpp" />
+    <ClCompile Include="review.cpp" />
     <ClCompile Include="SnakeWeb.cpp" />
+    <ClCompile Include="SysEventSoft.cpp" />
     <ClCompile Include="Tasker.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -156,6 +158,7 @@
     <ClInclude Include="Helper.h" />
     <ClInclude Include="markdown.h" />
     <ClInclude Include="SnakeWeb.h" />
+    <ClInclude Include="Tasker.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="achievement.sws" />
