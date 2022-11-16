@@ -19,6 +19,9 @@
     <Filter Include="Файлы ресурсов\Загатовки для документа">
       <UniqueIdentifier>{6b301b07-6fe0-47cb-81cb-a2c85a80069c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы ресурсов\Достижения">
+      <UniqueIdentifier>{d184637a-53bb-416c-98e4-13c317bec24e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -33,6 +36,18 @@
     <ClCompile Include="markdown.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="achievement">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
+    <ClCompile Include="Tasker.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="review.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="SysEventSoft.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Helper.h">
@@ -44,6 +59,9 @@
     <ClInclude Include="markdown.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="Tasker.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="test.txt">
@@ -53,6 +71,9 @@
       <Filter>Файлы ресурсов</Filter>
     </Text>
     <Text Include="Config.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="user">
       <Filter>Файлы ресурсов</Filter>
     </Text>
   </ItemGroup>
@@ -74,6 +95,9 @@
     </None>
     <None Include="classic.css">
       <Filter>Файлы ресурсов\Формы для стилизации</Filter>
+    </None>
+    <None Include="achievement.sws">
+      <Filter>Файлы ресурсов\Достижения</Filter>
     </None>
   </ItemGroup>
 </Project>

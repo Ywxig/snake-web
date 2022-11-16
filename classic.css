@@ -86,3 +86,28 @@
     border-left-color: rgb(1, 95, 1);
     background-color: rgb(0, 201, 27);
 }
+
+/*cut*/
+.button-palce-top {
+    border: 0px solid;
+    border-radius: 10px;
+    padding: 5px;
+    padding-bottom: 15px;
+    background-color: #2b2924;
+
+}
+
+/*cut*/
+.button-defolt {
+    border: none;
+    border-color: 0px solid #00000000;
+    border-radius: 35px;
+    background-color: #fda605;
+}
+
+.button-defolt:hover {
+    color: #fda605;
+    border-radius: 35px;
+    background-color: #fda60529;
+    size: 105%;
+}

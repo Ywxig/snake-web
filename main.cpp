@@ -3,16 +3,19 @@
 #include <string>
 #include <sstream>
 #include <vector>
+#include "Tasker.cpp"
 #include "Helper.h"
 // добовления самого интерпритатора
 #include "SnakeWeb.h"
 #include "markdown.h"
+#include "Tasker.h"
 
 //////////////////////////////////////////////////////////////////////////////////////|
 // В даннои файле находится прога предоставляющяя простой интерфейс к интерпритатору//|
 //////////////////////////////////////////////////////////////////////////////////////|
 
 using namespace std;
+
 
 
 int main() {
@@ -54,7 +57,7 @@ int main() {
 			string type_style_file;
 			string file;
 			cout << "$: Input name file: ";	cin >> file; // ввод даных имени файла 
-			cout << "$: Input type of styil file: ";	cin >> type_style_file; // ввод даных типа стиля файла, какое файл CSS использовать
+			cout << "$: Input type of styil file: ";	cin >> type_style_file; // ввод даных типа стиля файла, какое файл SW использовать
 			WriteInFile(file, Read(type_style_file));
 		}
 
@@ -113,9 +116,43 @@ int main() {
 			AddInFile(file_input, "\n\n");
 		}
 
+		if (command == "login") {
+			string name;
+			achievement ac;
+			cout << "$: Input name: "; cin >> name;
+
+			if (Read("user") == "") {
+				WriteInFile("user", "name::" + name);
+			}
+
+			else {
+				cout << "Err!!!";
+			}
+
+			
+		}
+
+		if (command == "achi") {
+			string name;
+			achievement ac;
+			cout << "$: Input name achievement: "; cin >> name;
+			cout << ac.get_name(name);
+		}
+		/*
+		if (command == "give") {
+			string index_str;
+			cout << "$: Input name achievement for give: "; cin >> index_str;
+
+			vector<string> content = split(Read("achievement.sws"), "\n");
+
+			AddInFile("user", "\nachievement::" + content[stoi(index_str)]);
+		}
+		*/
 		if (command == "quit") {// комманда выхода из главного цикла!
 			return 0;
 		}
+		
+
 
 
 		else {

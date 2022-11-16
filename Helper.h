@@ -11,8 +11,6 @@ using namespace std;
 
 vector<string> split(string str, string sep = " "); // прототип функции split() (не забывайте точку с запятой в конце!)
 
-string GetFunctionInJsScript(string file_input, string file_out, int index); // Прототоип функции для получения функции JS!
-
 void WriteInFile(string file_for_input, string string_for_input); // прототип функции добавления в фаил строки
 string Read(string file_to_read);// функция чьтения файла
 vector<string> SplitOnFild(string content); // Прототип функции для разбивания на поля исходный текст
@@ -24,4 +22,6 @@ void log(string log_text);// инструмент записи логов
 void printv(vector<string> arr);
 string int_to_str(int num);// функция для перевода иш int в str
 
+template<typename T>
+string toString(T val); // перевод из числа в сторку
 #endif

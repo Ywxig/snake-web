@@ -139,22 +139,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="achievement" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Helper.cpp" />
     <ClCompile Include="markdown.cpp" />
+    <ClCompile Include="review.cpp" />
     <ClCompile Include="SnakeWeb.cpp" />
+    <ClCompile Include="SysEventSoft.cpp" />
+    <ClCompile Include="Tasker.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Config.txt" />
     <Text Include="print" />
     <Text Include="test.txt" />
+    <Text Include="user" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Helper.h" />
     <ClInclude Include="markdown.h" />
     <ClInclude Include="SnakeWeb.h" />
+    <ClInclude Include="Tasker.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="achievement.sws" />
     <None Include="classic.css" />
     <None Include="classic.sw" />
     <None Include="GitForm.css" />
