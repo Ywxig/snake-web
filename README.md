@@ -26,11 +26,11 @@ These concepts are well suited for Designing full polorams, instead of the techn
 or you can write your own table, but there is a limitation in the table, you cannot add more than one cell, only one cell.
 
 
-> ` tr ` - answers for the table itself, this is tet ` table `
+> * ` tr ` - answers for the table itself, this is tet ` table `
 
-> ` td ` - table rows i.e. ` 1-n ` where ` n ` is the number of rows
+> * ` td ` - table rows i.e. ` 1-n ` where ` n ` is the number of rows
 
 # review
 
-> Algorithm for checking the code for the presence of any word or structure, and subcheck as a percentage of the number of key words in the code
+> * Algorithm for checking the code for the presence of any word or structure, and subcheck as a percentage of the number of key words in the code
 
