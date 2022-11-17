@@ -41,3 +41,10 @@ or you can write your own table, but there is a limitation in the table, you can
 
 >the Say() method is needed so that she can say a remark from the list
 >the Match_word() method is the algorithm for understanding what the user said
+
+## HR
+> Zoe will select the appropriate 42 first interviews for you to pass
+
+> And she is also the one who will piss you off, or rather from her person, you will receive tasks for which you need to answer yes or no
+
+> The find() method will find you suitable interviews for the type you specify and your level
