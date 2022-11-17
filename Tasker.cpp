@@ -122,7 +122,7 @@ public:
 
 };
 
-int Give(int index_str) {
+int give(int index_str) {
 	vector<string> content = split(Read("achievement.sws"), "\n");
 	achievement ac;
 	if ((ac.get(0, index_str) != "None") && (ac.get(0, index_str) != "")) {

@@ -22,6 +22,9 @@
     <Filter Include="Файлы ресурсов\Достижения">
       <UniqueIdentifier>{d184637a-53bb-416c-98e4-13c317bec24e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы ресурсов\Вакансии">
+      <UniqueIdentifier>{426bdf91-621d-424c-af65-9c0ac5bc133d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -42,10 +45,10 @@
     <ClCompile Include="Tasker.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="review.cpp">
+    <ClCompile Include="SysEventSoft.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="SysEventSoft.cpp">
+    <ClCompile Include="Zoe.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

@@ -9,6 +9,7 @@
 #include "SnakeWeb.h"
 #include "markdown.h"
 #include "Tasker.h"
+#include "Zoe.cpp"
 
 //////////////////////////////////////////////////////////////////////////////////////|
 // В даннои файле находится прога предоставляющяя простой интерфейс к интерпритатору//|
@@ -130,6 +131,19 @@ int main() {
 			}
 
 			
+		}
+
+		if ((command == "interview") || (command == "inter")) { // вызов подборки интервью
+			string name;
+			const int loops = 1;
+			int score = 0;
+			cout << "$: Input name type interview: "; cin >> name; // ввод типа интерьвью к примеру pascal!
+			Interview inter;
+			while (score < loops)
+			{
+				cout << inter.find(name);
+				score++;
+			}
 		}
 
 		if (command == "achi") {

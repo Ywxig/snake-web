@@ -22,6 +22,11 @@ void log(string log_text);// инструмент записи логов
 void printv(vector<string> arr);
 string int_to_str(int num);// функция для перевода иш int в str
 
+string get(string name_file, string name_str, int return_index = 5); // Функция для получения информации используя роздилитель "::"
+vector<char> list(string string); // переводим строку в симвалы
+bool line_serchCHAR(vector<char> for_sech_vector, char for_find); // Линейный поис элемента в масиве симвалов
+
+
 template<typename T>
 string toString(T val); // перевод из числа в сторку
 #endif

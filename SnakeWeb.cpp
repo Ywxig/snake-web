@@ -113,11 +113,11 @@ int SnakeWeb(string file_input, string file_out) {// Функция с самим языком. Тут
 				AddInFile(file_out, "\n" + Word[1] + "\n");
 				scoreCss++;
 				if (scoreCss > 10) { 
-					Give(1);
+					give(1);
 				}
 
 				else {
-					Give(0);
+					give(0);
 				}
 
 			}
@@ -144,7 +144,7 @@ int SnakeWeb(string file_input, string file_out) {// Функция с самим языком. Тут
 
 			if (Word[0] == "var") {
 				scoreVar++;
-				Give(3);
+				give(3);
 				if (Word[1] == "color") {
 					Matrix matrix;
 					
@@ -191,7 +191,7 @@ int SnakeWeb(string file_input, string file_out) {// Функция с самим языком. Тут
 					}
 
 					if (Word[2] == "btn-top") {
-						Give(4);
+						give(4);
 						AddInFile(file_out, "\n<div class=\"button-palce-top\">");
 					}
 
@@ -228,10 +228,10 @@ int SnakeWeb(string file_input, string file_out) {// Функция с самим языком. Тут
 
 			if (Word[0] == "md") {
 				scoreMD++;
-				Give(8);
-				if (scoreMD > 3) { Give(9); }
-				if (scoreMD > 6) { Give(10); }
-				if (scoreMD > 12) { Give(11); }
+				give(8);
+				if (scoreMD > 3) { give(9); }
+				if (scoreMD > 6) { give(10); }
+				if (scoreMD > 12) { give(11); }
 				get_text_in_fail_for_markdown(Word[1], file_out);
 			}
 
@@ -258,7 +258,7 @@ int SnakeWeb(string file_input, string file_out) {// Функция с самим языком. Тут
 
 			if ( Word[0] == "td") {
 				int index_col = stoi(Word[1]);
-				if (index_col > 50) { Give(6); }
+				if (index_col > 50) { give(6); }
 				vector<string> col;
 					for (int i = 0; i < index_col; i++) {
 						AddInFile(file_out, "<tr>\n<td> ... </td></tr>\n");
@@ -268,7 +268,7 @@ int SnakeWeb(string file_input, string file_out) {// Функция с самим языком. Тут
 
 			if (Word[0] == "use") {
 				if (Word[1] == "css") {
-					Give(2);
+					give(2);
 					int index_var = 1;
 					vector<string> content_file_css = split(Read(Word[2]));
 					for (int i = 0; i < content_file_css.size(); i++) {
@@ -293,14 +293,14 @@ int SnakeWeb(string file_input, string file_out) {// Функция с самим языком. Тут
 				if (Word[1] == "js") {
 					string content = Read(Word[2]);
 					AddInFile(file_out, "\n" + content + "\n");
-					Give(12);
+					give(12);
 				}
 
 				if (Word[1] == "form") {
 					Forms Form;
 					Form = Forms();
 					AddInFile(file_out, Form.GetForm(Word[2], stoi(Word[3])));
-					Give(7);
+					give(7);
 				}
 			}
 			if (Word[0] == "color") {
@@ -308,7 +308,7 @@ int SnakeWeb(string file_input, string file_out) {// Функция с самим языком. Тут
 					if (Word[2] == "var") {
 						Matrix matrix;
 
-						if (stoi(matrix.getElement(stoi(Word[3]), 0)) <= 0) { Give(5); }
+						if (stoi(matrix.getElement(stoi(Word[3]), 0)) <= 0) { give(5); }
 
 						AddInFile(file_out, "\nbackground-color: rgb(" + matrix.getElement(stoi(Word[3]), 0) + ", " + matrix.getElement(stoi(Word[3]), 1) + ", " + matrix.getElement(stoi(Word[3]), 2) + ");\n");
 
@@ -332,7 +332,7 @@ int SnakeWeb(string file_input, string file_out) {// Функция с самим языком. Тут
 							}
 						}
 						AddInFile(file_out, "\nbackground-color: rgb(" + color_fin_vector[0] + ", " + color_fin_vector[1] + ", " + color_fin_vector[2] + ");\n");
-						Give(13);
+						give(13);
 					}
 
 					
@@ -357,7 +357,7 @@ int SnakeWeb(string file_input, string file_out) {// Функция с самим языком. Тут
 					}
 
 					AddInFile(file_out, "\ncolor: rgb(" + color_fin_vector[0] + ", " + color_fin_vector[1] + ", " + color_fin_vector[2] + ");\n");
-					Give(14);
+					give(14);
 
 				}
 			}

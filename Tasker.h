@@ -7,6 +7,6 @@
 using namespace std;
 #pragma once
 
-int Give(int index_str); // выдоч€ достижени€ только из файла с общим списком достижени€
+int give(int index_str); // выдоч€ достижени€ только из файла с общим списком достижени€
 
 #endif

@@ -4,9 +4,32 @@
 #include <string>
 #include <sstream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
+
+bool line_serchCHAR( vector<char> for_sech_vector, char for_find ) {
+	for (int i = 0; i < for_sech_vector.size(); i++) {
+		if (for_sech_vector[i] == for_find) {
+			return true;
+		}
+	}
+	return false;
+}
+
+
+
+vector<char> list(string string)
+{
+	vector<char> v(string.begin(), string.end());
+
+//	for (const char& c : v) {
+//		cout << c; // проходим по масиву симвалов и вывод по очереди на экран
+//	} 
+
+	return v;
+}
 
 
 template <typename T>
@@ -129,6 +152,20 @@ vector<string> split(string str, string sep = " ") {// Функция для разбивания ст
 			cout << arr[i];
 		}
 	}
+
+
+string get( string name_file, string name_str, int return_index = 5 ) {
+
+	vector<string> content = split(Read(name_file), "\n");
+
+	for (int i = 0; i < content.size(); i++) {
+		vector<string> content_str = split(content[1], "::");
+		if ((content_str[0] == name_str) || (content_str[1] == name_str)) {
+			return content_str[return_index];
+		}
+	}
+
+}
 
 
 	class Vec {

@@ -143,10 +143,10 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Helper.cpp" />
     <ClCompile Include="markdown.cpp" />
-    <ClCompile Include="review.cpp" />
     <ClCompile Include="SnakeWeb.cpp" />
     <ClCompile Include="SysEventSoft.cpp" />
     <ClCompile Include="Tasker.cpp" />
+    <ClCompile Include="Zoe.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Config.txt" />
