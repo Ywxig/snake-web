@@ -34,3 +34,10 @@ or you can write your own table, but there is a limitation in the table, you can
 
 > * Algorithm for checking the code for the presence of any word or structure, and subcheck as a percentage of the number of key words in the code
 
+# Zoe in Snake-Web
+## Understanding 
+
+> Zoe can understand what you wrote. Uses an algorithm for comparing characters and then checking this number with a number to pass the 55% check
+
+>the Say() method is needed so that she can say a remark from the list
+>the Match_word() method is the algorithm for understanding what the user said
